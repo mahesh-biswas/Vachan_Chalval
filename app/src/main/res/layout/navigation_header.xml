@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/side_nav_bar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="120sp"
+            android:layout_height="150sp"
+            android:layout_margin="10sp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:src="@drawable/profile_usisex" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textStyle="bold|italic"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="05sp"/>
+            <!--<Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LogOut"
+                android:layout_marginTop="10sp"/>-->
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="email"
+        android:textStyle="bold|italic"
+        android:layout_marginLeft="15sp"
+        android:layout_marginBottom="15sp"
+        android:id="@+id/email"/>
+
+</LinearLayout>

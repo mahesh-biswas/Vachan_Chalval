@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="Menu items">
+            <menu>
+                <item android:title="Show Books"
+                    android:icon="@drawable/ic_account_box_black_48dp"
+                    android:id="@+id/books"/>
+                <item android:title="Manage Uploads"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:id="@+id/manage"/>
+                <item android:title="Item 3"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:id="@+id/it3"/>
+                <item android:title="Item 4"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:id="@+id/it4"/>
+                <item android:title="Test Activity"
+                    android:icon="@drawable/ic_error_black_48dp"
+                    android:id="@+id/test_activity"/>
+                <item android:title="Main Activity(tabbed)"
+                    android:icon="@drawable/ic_account_balance_black_48dp"
+                    android:id="@+id/main_activity"/>
+            </menu>
+        </item>
+    </group>
+    <item android:title="Account Items">
+        <menu>
+            <item android:title="My Account"
+                android:icon="@drawable/ic_account_box_black_48dp"
+                android:id="@+id/account"/>
+            <item android:title="Sign Out"
+                android:icon="@drawable/ic_power_settings_new_black_48dp"
+                android:id="@+id/signout"/>
+        </menu>
+    </item>
+</menu>
