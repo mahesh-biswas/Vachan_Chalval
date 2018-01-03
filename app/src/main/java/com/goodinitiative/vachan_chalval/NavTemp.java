@@ -38,7 +38,7 @@ public class NavTemp extends AppCompatActivity implements NavigationView.OnNavig
     NavigationView navigationView;
     Button logout;
     CircularImageView civ;
-    ImageView profile;
+    CircularImageView profile;
 //    CircularImageView profile;
     TextView name,email;
     View navigationHeader;
@@ -57,7 +57,7 @@ public class NavTemp extends AppCompatActivity implements NavigationView.OnNavig
         setSupportActionBar(toolbar);
         navigationHeader = navigationView.getHeaderView(0);
         logout = (Button) navigationHeader.findViewById(R.id.logout);
-        profile = (ImageView) navigationHeader.findViewById(R.id.profile);
+        profile = (CircularImageView) navigationHeader.findViewById(R.id.profile);
 //        profile = (CircularImageView) navigationHeader.findViewById(R.id.profile);
         name = (TextView) navigationHeader.findViewById(R.id.name);
         email = (TextView) navigationHeader.findViewById(R.id.email);
@@ -96,7 +96,6 @@ public class NavTemp extends AppCompatActivity implements NavigationView.OnNavig
                     profileurl = Uri.parse(usr.getProfileurl());
                     Glide.with(getApplicationContext())
                             .load(profileurl)
-                            .placeholder(android.R.drawable.progress_horizontal)
                             .into(profile);
                     toast("glide?");
                 }
