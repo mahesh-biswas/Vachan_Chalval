@@ -37,12 +37,12 @@ public class ShowBooks extends AppCompatActivity {
     List <layoutView> bookList;
 
     FirebaseAuth fAuth;
-    DatabaseReference fDatabase, fDatabase1;
+    DatabaseReference fDatabase;
+    FirebaseUser fUser;
     StorageReference fStorage;
     int mode;
     int itemselectednumber;
     String itemselwctedname;
-    FirebaseUser fUser;
     myAdapter adapter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

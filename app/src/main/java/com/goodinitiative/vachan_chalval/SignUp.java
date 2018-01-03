@@ -1,6 +1,5 @@
 package com.goodinitiative.vachan_chalval;
 
-import android.*;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -33,8 +32,6 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.io.File;
-
 public class SignUp extends AppCompatActivity {
     EditText email,name,password,contact,addr;
     ImageView profile;
@@ -64,7 +61,7 @@ public class SignUp extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user!=null){
-            startActivity(new Intent(SignUp.this,TestActivity.class));
+            startActivity(new Intent(SignUp.this,UploadBook.class));
             toast(user.getEmail()+" : "+user.getPhotoUrl());
         }
 
@@ -246,7 +243,7 @@ public class SignUp extends AppCompatActivity {
 //                                        fAuth.signOut();
 //                                        toast("logOut Success");
                                         finish();
-                                        startActivity(new Intent(SignUp.this,TestActivity.class));
+                                        startActivity(new Intent(SignUp.this,UploadBook.class));
                                     }
                                 })
                                 .create().show();

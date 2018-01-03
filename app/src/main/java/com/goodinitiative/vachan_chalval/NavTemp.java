@@ -1,9 +1,7 @@
 package com.goodinitiative.vachan_chalval;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
-import android.opengl.EGLExt;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,7 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -134,11 +131,10 @@ public class NavTemp extends AppCompatActivity implements NavigationView.OnNavig
                         break;
                     case R.id.test_activity:
                         finish();
-                        startActivity(new Intent(NavTemp.this,TestActivity.class));
+                        startActivity(new Intent(NavTemp.this,UploadBook.class));
                         break;
                     case R.id.main_activity:
-                        finish();
-                        startActivity(new Intent(NavTemp.this,MainActivity.class));
+                        toast("Activity No More Exist");
                         break;
                     case R.id.account:
                         toast("My Account");

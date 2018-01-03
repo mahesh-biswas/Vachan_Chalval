@@ -1,14 +1,10 @@
 package com.goodinitiative.vachan_chalval;
 
-import android.*;
 import android.Manifest;
-import android.app.usage.ExternalStorageStats;
-import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -19,7 +15,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.MimeTypeMap;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,7 +38,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 
-public class TestActivity extends AppCompatActivity {
+public class UploadBook extends AppCompatActivity {
 
     private Spinner year;
     private ImageView imageView;
@@ -73,7 +68,7 @@ public class TestActivity extends AppCompatActivity {
         Toolbar mtToolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(mtToolbar);
         checkFilePermission();
-        ArrayAdapter AA =ArrayAdapter.createFromResource(TestActivity.this,R.array.yearofpurchase,android.R.layout.simple_list_item_activated_1);
+        ArrayAdapter AA =ArrayAdapter.createFromResource(UploadBook.this,R.array.yearofpurchase,android.R.layout.simple_list_item_activated_1);
         year.setAdapter(AA);
 
 
@@ -152,7 +147,7 @@ public class TestActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()) {
-                            new AlertDialog.Builder(TestActivity.this)
+                            new AlertDialog.Builder(UploadBook.this)
                                     .setTitle("Result")
                                     .setMessage("Process Completed succesfully.\n Book Added to Database")
                                     .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
@@ -177,20 +172,19 @@ public class TestActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.main_activity){
-            toast("main activity selected");
-            startActivity(new Intent(TestActivity.this,MainActivity.class));
+            toast("Activity No More Exist");
         }else if(item.getItemId() == R.id.logout){
             toast("logout selected");
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(TestActivity.this,Login.class));
+            startActivity(new Intent(UploadBook.this,Login.class));
         }
         return super.onOptionsItemSelected(item);
     }
 
     private void checkFilePermission(){
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                int permissioncheck = TestActivity.this.checkSelfPermission("Manifest.permission.READ_EXTERNAL_STORAGE");
-                permissioncheck += TestActivity.this.checkSelfPermission("Manifest.permission.WRITE_EXTERNAL_STORAGE");
+                int permissioncheck = UploadBook.this.checkSelfPermission("Manifest.permission.READ_EXTERNAL_STORAGE");
+                permissioncheck += UploadBook.this.checkSelfPermission("Manifest.permission.WRITE_EXTERNAL_STORAGE");
                 if(permissioncheck!=0){
                     this.requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},1);
                 }
@@ -240,7 +234,7 @@ public class TestActivity extends AppCompatActivity {
             return false;
         }
         if(charge.getText().toString().equals("")){
-            new AlertDialog.Builder(TestActivity.this)
+            new AlertDialog.Builder(UploadBook.this)
                     .setTitle("Are you sure?")
                     .setMessage("is the book free of charge?")
                     .setPositiveButton("Fix It", new DialogInterface.OnClickListener() {

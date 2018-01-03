@@ -212,8 +212,7 @@ public class EditBook extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.main_activity){
-            toast("main activity selected");
-            startActivity(new Intent(EditBook.this,MainActivity.class));
+            toast("Activity No More Exist");
         }else if(item.getItemId() == R.id.logout){
             toast("logout selected");
             FirebaseAuth.getInstance().signOut();

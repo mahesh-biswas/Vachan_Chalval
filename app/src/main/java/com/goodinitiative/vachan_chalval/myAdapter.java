@@ -28,19 +28,6 @@ public class myAdapter extends ArrayAdapter<layoutView>{
     List<layoutView> list;
     List<layoutView> orig;
     int resource;
-    public myAdapter(@NonNull MainActivity.catGrid catGrid, @NonNull List<layoutView> objects, int resource) {
-        super(catGrid.context, resource, objects);
-        this.context = catGrid.context;
-        this.list = objects;
-        this.resource = resource;
-    }
-
-    public myAdapter(MainActivity.catList catList, @NonNull List<layoutView> objects, int resource) {
-        super(catList.context, resource, objects);
-        this.context = catList.context;
-        this.list = objects;
-        this.resource = resource;
-    }
 
     public myAdapter(ShowBooks bookList, @NonNull List<layoutView> books, int resource){
         super(bookList.getApplicationContext(),resource,books);
