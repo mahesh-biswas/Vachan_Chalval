@@ -129,12 +129,9 @@ public class NavTemp extends AppCompatActivity implements NavigationView.OnNavig
                         showbooksonlymy.putExtra("mode","my");
                         startActivity(showbooksonlymy);
                         break;
-                    case R.id.test_activity:
+                    case R.id.upload:
                         finish();
                         startActivity(new Intent(NavTemp.this,UploadBook.class));
-                        break;
-                    case R.id.main_activity:
-                        toast("Activity No More Exist");
                         break;
                     case R.id.account:
                         toast("My Account");

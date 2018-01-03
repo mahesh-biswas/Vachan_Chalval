@@ -14,17 +14,20 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Email"
-            android:text="kajolbiswas075@gmail.com"
+            android:hint="Your Email"
             android:id="@+id/email"
+            android:drawableLeft="@drawable/ic_account_circle_black_48dp"
+            android:drawablePadding="10dp"
             android:layout_margin="10sp"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Password"
-            android:text="G00GLE.com"
             android:id="@+id/password"
+            android:drawableLeft="@drawable/ic_vpn_key_black_48dp"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
             android:layout_margin="10sp"/>
 
         <LinearLayout

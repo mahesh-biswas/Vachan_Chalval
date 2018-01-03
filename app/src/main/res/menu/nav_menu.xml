@@ -5,23 +5,20 @@
         <item android:title="Menu items">
             <menu>
                 <item android:title="Show Books"
-                    android:icon="@drawable/ic_account_box_black_48dp"
+                    android:icon="@drawable/ic_library_books_black_48dp"
                     android:id="@+id/books"/>
                 <item android:title="Manage Uploads"
-                    android:icon="@drawable/ic_menu_gallery"
+                    android:icon="@drawable/ic_menu_manage"
                     android:id="@+id/manage"/>
                 <item android:title="Item 3"
-                    android:icon="@drawable/ic_menu_slideshow"
+                    android:icon="@drawable/ic_error_black_48dp"
                     android:id="@+id/it3"/>
                 <item android:title="Item 4"
-                    android:icon="@drawable/ic_menu_manage"
-                    android:id="@+id/it4"/>
-                <item android:title="Test Activity"
                     android:icon="@drawable/ic_error_black_48dp"
-                    android:id="@+id/test_activity"/>
-                <item android:title="Main Activity(tabbed)"
-                    android:icon="@drawable/ic_account_balance_black_48dp"
-                    android:id="@+id/main_activity"/>
+                    android:id="@+id/it4"/>
+                <item android:title="Upload Book"
+                    android:icon="@drawable/ic_cloud_upload_black_48dp"
+                    android:id="@+id/upload"/>
             </menu>
         </item>
     </group>
